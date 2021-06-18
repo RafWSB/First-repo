@@ -16,33 +16,15 @@ def usun_znaki_biale(content):
         content = content.replace("  ", " ")
     return content
 
-
-
-
-
-
-
 def usun_znaki_specjalne(content):
     for special in string.punctuation:
         content = content.replace(special, "")
     return content
 
-
-
-
-
-
-
-
 def usun_cyfry(content):
     for i in range(ord("0"), ord("9") + 1):
         content = content.replace(chr(i), "")
     return content
-
-
-
-
-
 
 #-------- Funkcje dzielące teksty na słowa i zdania -------------------------------------------
 def podzial_na_slowa(content):
@@ -52,22 +34,11 @@ def podzial_na_slowa(content):
     lista = content.split(" ")
     return lista
 
-
-
-
-
-
 def podzial_na_zdania(content):
     content = usun_znaki_biale(content)
     content = usun_cyfry(content)
     lista = content.split(".")
     return lista
-
-
-
-
-
-
 
 #------- Funkcja dzieląca teksty na pojedyncze słowa i sprawdzająca ile słów sie powtarza ------
 def skanuj_pojedyncze_slowa(txt1, txt2):
